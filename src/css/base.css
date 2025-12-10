@@ -1,0 +1,85 @@
+:root {
+    --bg: #0f0f10;
+    --panel: #121214;
+    --muted: #BFC0C3;
+    --accent: #A593FF;
+    --text: #FFFFFF;
+    --radius: 12px;
+    --nav-height: 68px;
+}
+
+* {
+    box-sizing: border-box
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    -webkit-font-smoothing: antialiased
+}
+
+body {
+    font-family: Inter, "Segoe UI", Roboto, system-ui, Arial, sans-serif
+}
+
+a {
+    color: inherit
+}
+
+button {
+    font-family: inherit
+}
+
+.app {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 16px;
+    padding-bottom: calc(var(--nav-height) + 24px)
+}
+
+.app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px
+}
+
+.icon {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    opacity: .95
+}
+
+h1 {
+    margin: 0;
+    color: var(--accent);
+    font-size: 18px
+}
+
+.views {
+    min-height: 220px
+}
+
+.view {
+    display: none
+}
+
+    .view.active {
+        display: block
+    }
+
+.footer {
+    margin-top: 12px;
+    color: var(--muted);
+    font-size: 12px;
+    text-align: center
+}

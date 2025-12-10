@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Dream Editor</title>
+    <link rel="stylesheet" href="css/dream-create.css">
+</head>
+<body>
+    <div class="editor-root">
+        <header class="editor-header">
+            <div class="header-left">
+                <img src="eye.ico" alt="" class="icon" />
+                <h1>Dream Editor</h1>
+            </div>
+            <div class="header-actions">
+                <button id="btnCancel" class="btn neutral">Cancel</button>
+                <button id="btnSave" class="btn primary">Save</button>
+            </div>
+        </header>
+
+        <main class="editor-main">
+            <form id="dreamForm" class="editor-form" autocomplete="off" novalidate>
+                <input type="hidden" id="id" name="id" />
+
+                <section class="left-column">
+                    <label class="field">
+                        <span class="label">Title  |  عنوان</span>
+                        <input id="title" name="title" type="text" class="input" required />
+                    </label>
+
+                    <label class="field">
+                        <span class="label">Body  |  شرح خواب</span>
+                        <textarea id="body" name="body" class="textarea large" required></textarea>
+                    </label>
+
+                    <label class="field">
+                        <span class="label">Interpretation  | تعبیر</span>
+                        <textarea id="interpretation" name="interpretation" class="textarea"></textarea>
+                    </label>
+
+                    <label class="field">
+                        <span class="label">Foreshadowing  |  پیشگویی</span>
+                        <textarea id="foreshadowing" name="foreshadowing" class="textarea small"></textarea>
+                    </label>
+
+                    <label class="field">
+                        <span class="label">Cause  |  علت</span>
+                        <textarea id="cause" name="cause" class="textarea"></textarea>
+                    </label>
+
+                    <label class="field">
+                        <span class="label">People Names  |   اسامی افراد</span>
+                        <input id="people" name="people" class="input" />
+                    </label>
+                </section>
+
+                <aside class="right-column">
+                    <div class="row two">
+                        <label class="field">
+                            <span class="label">Date Event  | تاریخ</span>
+                            <input id="date_event" name="date_event" type="datetime-local" class="input" />
+                        </label>
+                        <label class="field">
+                            <span class="label">Date Hour  | ساعت</span>
+                            <input id="date_hour" name="date_hour" type="time" class="input" />
+                        </label>
+                    </div>
+
+                    <div class="field">
+                        <label class="checkbox">
+                            <input id="is_occurred" name="is_occurred" type="checkbox" />
+                            <span>Foreshadowing Occurred ? |  پیشگویی اتفاق افتاد ؟</span>
+                        </label>
+                    </div>
+
+                    <label class="field">
+                        <span class="label">Date Occurred  | تاریخ رویداد</span>
+                        <input id="date_occurred" name="date_occurred" type="datetime-local" class="input" />
+                    </label>
+
+                    <label class="field">
+                        <span class="label">What Occurred ?  |  چه اتفاقی افتاد ؟</span>
+                        <textarea id="narration" name="narration" class="textarea medium"></textarea>
+                    </label>
+
+                    <label class="field">
+                        <span class="label">Location | مکان</span>
+                        <input id="location" name="location" class="input" />
+                    </label>
+
+                    <label class="field">
+                        <span class="label">Purpose  |  هدف</span>
+                        <input id="purpose" name="purpose" class="input" />
+                    </label>
+
+                    <label class="field">
+                        <span class="label">Opinion  |  دیدگاه</span>
+                        <textarea id="opinion" name="opinion" class="textarea medium"></textarea>
+                    </label>
+
+                    <div class="row sliders">
+                        <label class="field slider-field">
+                            <span class="label">Lucidity  | شفافیت</span>
+                            <input id="lucidity" name="lucidity" type="range" min="0" max="10" step="1" value="0" />
+                            <output id="lucidityVal">0</output>
+                        </label>
+
+                        <label class="field slider-field">
+                            <span class="label">Importance  | اهمیت</span>
+                            <input id="importance" name="importance" type="range" min="0" max="10" step="1" value="0" />
+                            <output id="importanceVal">0</output>
+                        </label>
+                    </div>
+
+                    <div class="row checks">
+                        <label class="checkbox"><input id="is_public" name="is_public" type="checkbox" /> <span>Is Public</span></label>
+                        <label class="checkbox"><input id="is_locked" name="is_locked" type="checkbox" /> <span>Is Lock</span></label>
+                        <label class="checkbox"><input id="is_imagination" name="is_imagination" type="checkbox" /> <span>Is Imagination</span></label>
+                        <label class="checkbox"><input id="is_spoiler" name="is_spoiler" type="checkbox" /> <span>Spoiler</span></label>
+                    </div>
+
+                    <label class="field">
+                        <span class="label">User ID</span>
+                        <input id="user_id" name="user_id" type="number" class="input" />
+                    </label>
+                </aside>
+            </form>
+        </main>
+
+        <footer class="editor-footer">
+            <small>Responsive editor for phone and desktop. Save will POST full record to API.</small>
+        </footer>
+    </div>
+
+    <script src="js/dream-create.js"></script>
+</body>
+</html>

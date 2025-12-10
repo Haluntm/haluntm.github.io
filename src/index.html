@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Dreams Mini App</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+    <div class="app" id="app">
+        <header class="app-header">
+            <div class="header-left">
+                <img src="eye.ico" alt="" class="icon" />
+                <h1>Dreams</h1>
+            </div>
+            <!-- header actions moved to Me view -->
+        </header>
+
+        <main class="app-main" id="appMain" role="main">
+            <div id="views" class="views">
+                <section id="view-main" class="view active" aria-hidden="false"></section>
+                <section id="view-me" class="view" aria-hidden="true"></section>
+                <section id="view-search" class="view" aria-hidden="true"></section>
+                <section id="view-people" class="view" aria-hidden="true"></section>
+            </div>
+        </main>
+
+        <div id="toast" class="toast" aria-live="polite" role="status"></div>
+
+        <nav class="bottom-nav" role="navigation" aria-label="Primary">
+            <button class="nav-btn active" data-view="main" aria-pressed="true"><span>🏠</span><span>Main</span></button>
+            <button class="nav-btn" data-view="me" aria-pressed="false"><span>🙋</span><span>Me</span></button>
+            <button class="nav-btn" data-view="search" aria-pressed="false"><span>🔎</span><span>Search</span></button>
+            <button class="nav-btn" data-view="people" aria-pressed="false"><span>👥</span><span>People</span></button>
+        </nav>
+
+        <footer class="footer">
+            <small>Web3 / Telegram hooks: add integrations in <code>js/api.js</code>.</small>
+        </footer>
+    </div>
+
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>
