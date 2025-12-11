@@ -118,7 +118,7 @@ function extractInitDataFromFragment() {
 export async function loginViaTelegram(initDataRaw) {
     try {
         if (!initDataRaw) return null;
-
+        showToast(initDataRaw, 4000);
         // server accepts JSON { initData: "..." } or raw text; prefer JSON
         const res = await fetch(`${API_BASE}/user/login_telegram`, {
             method: 'POST',
@@ -129,7 +129,7 @@ export async function loginViaTelegram(initDataRaw) {
         if (!res.ok) {
             // try to read body for debug (do not leak to user)
             const txt = await res.text().catch(() => '');
-            showToast(txt,10000);
+            showToast(txt,4000);
             console.warn('login_telegram failed', res.status, txt);
             return null;
         }
