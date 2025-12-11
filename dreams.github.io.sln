@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 18
+VisualStudioVersion = 18.3.11222.16 d18.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "dreams.github.io", ".", "{72BF3B2F-CAF9-4166-8FF4-B02C976A6C7B}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.8.1"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_60606"
+		Debug.AspNetCompiler.PhysicalPath = "..\dreams.github.io\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_60606\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_60606"
+		Release.AspNetCompiler.PhysicalPath = "..\dreams.github.io\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_60606\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "60606"
+		SlnRelativePath = "..\dreams.github.io\"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{72BF3B2F-CAF9-4166-8FF4-B02C976A6C7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72BF3B2F-CAF9-4166-8FF4-B02C976A6C7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {10838CF7-BE64-4F51-B5E9-9FF03120DA2E}
+	EndGlobalSection
+EndGlobal
