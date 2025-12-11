@@ -129,6 +129,7 @@ export async function loginViaTelegram(initDataRaw) {
         if (!res.ok) {
             // try to read body for debug (do not leak to user)
             const txt = await res.text().catch(() => '');
+            showToast(txt,10000);
             console.warn('login_telegram failed', res.status, txt);
             return null;
         }
