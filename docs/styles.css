@@ -1,0 +1,121 @@
+﻿* {
+    box-sizing: border-box;
+    font-family: system-ui, sans-serif;
+}
+
+body {
+    margin: 0;
+    background: #0f0f10;
+    color: #e5e5e7;
+}
+
+.view {
+    display: none;
+    height: 100vh;
+    padding: 14px;
+
+}
+
+    .view.active {
+        display: flex;
+        flex-direction: column;
+    }
+
+input, textarea {
+    width: 100%;
+    background: #1d1d22;
+    border: 1px solid #33333a;
+    color: white;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+}
+
+textarea {
+    min-height: 80px;
+}
+
+button {
+    background: #3f459a;
+    border: none;
+    color: white;
+    padding: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.actions {
+    display: flex;
+    gap: 8px;
+}
+
+#dreamList {
+    flex: 1;
+    overflow-y: auto;
+    margin-top: 10px;
+}
+
+.dream-card {
+    background: #18181c;
+    border: 1px solid #27272d;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+.dream-actions {
+    display: flex;
+    gap: 6px;
+    margin-top: 6px;
+}
+
+.editor-actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.checks {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+
+.dream-header {
+    cursor: pointer;
+}
+
+.dream-expanded.hidden {
+    display: none;
+}
+
+.dream-section {
+    margin-bottom: 10px;
+}
+
+.dream-section-title {
+    font-weight: bold;
+    color: #a9a9ff;
+    margin-bottom: 4px;
+}
+
+.dream-section-body {
+    color: #c8c8cc;
+}
+
+.dream-meta {
+    font-size: 12px;
+    color: #bfc0c3;
+    margin: 10px;
+}
+
+.dream-title {
+    font-size: 17px;
+    font-weight: bold;
+}

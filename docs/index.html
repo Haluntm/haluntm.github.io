@@ -1,47 +1,82 @@
-<!doctype html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Dreams Mini App</title>
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/components.css">
-    <script src="/docs/js/telegram.js"></script>
-
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dreams</title>
+    <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <div class="app" id="app">
-        <header class="app-header">
-            <div class="header-left">
-                <img src="eye.ico" alt="" class="icon" />
-                <h1>Dreams</h1>
+
+    <main id="app">
+
+        <!-- LOGIN -->
+        <section id="login-view" class="view active">
+            <h1>Dreams</h1>
+            <input id="usernameInput" placeholder="Username">
+            <input id="passwordInput" type="password" placeholder="Password">
+            <button id="loginBtn">Login</button>
+        </section>
+
+        <!-- DREAMS -->
+        <section id="dreams-view" class="view">
+            <header class="topbar">
+                <span id="userName"></span>
+                <div>
+                    <button id="newDreamBtn">➕ New</button>
+                    <button id="refreshBtn">💫 Refresh</button>
+                </div>
+            </header>
+
+            <input id="searchInput" placeholder="Search dreams…" />
+
+            <div class="actions">
+                <button id="copyAllBtn">📄 Copy All</button>
+                <button id="goToEndBtn">⚓ Go to End</button>
             </div>
-            <!-- header actions moved to Me view -->
-        </header>
 
-        <main class="app-main" id="appMain" role="main">
-            <div id="views" class="views">
-                <section id="view-main" class="view active" aria-hidden="false"></section>
-                <section id="view-me" class="view" aria-hidden="true"></section>
-                <section id="view-search" class="view" aria-hidden="true"></section>
-                <section id="view-people" class="view" aria-hidden="true"></section>
+            <div id="dreamList"></div>
+        </section>
+
+        <!-- EDITOR -->
+        <section id="editor-view" class="view">
+            <h2 id="editorTitle">New Dream</h2>
+
+            <input id="edTitle" placeholder="Title">
+            <textarea id="edBody" placeholder="Body"></textarea>
+            <textarea id="edInterpretation" placeholder="Interpretation"></textarea>
+            <textarea id="edForeshadowing" placeholder="Foreshadowing"></textarea>
+            <textarea id="edCause" placeholder="Cause"></textarea>
+            <input id="edPeople" placeholder="People names">
+
+            <input id="edDateEvent" placeholder="Date event">
+            <input id="edDateHour" placeholder="Date hour">
+
+            <input id="edLocation" placeholder="Location">
+            <input id="edPurpose" placeholder="Purpose">
+            <textarea id="edOpinion" placeholder="Opinion"></textarea>
+
+            <div class="checks">
+                <label><input type="checkbox" id="edPublic"> Public</label>
+                <label><input type="checkbox" id="edLocked"> Locked</label>
+                <label><input type="checkbox" id="edImagination"> Imagination</label>
+                <label><input type="checkbox" id="edSpoiler"> Spoiler</label>
             </div>
-        </main>
 
-        <div id="toast" class="toast" aria-live="polite" role="status"></div>
+            <label>Lucidity</label>
+            <input type="range" id="edLucidity" min="0" max="10">
 
-        <nav class="bottom-nav" role="navigation" aria-label="Primary">
-            <button class="nav-btn active" data-view="main" aria-pressed="true"><span>🏠</span><span>Main</span></button>
-            <button class="nav-btn" data-view="me" aria-pressed="false"><span>🙋</span><span>Me</span></button>
-            <button class="nav-btn" data-view="search" aria-pressed="false"><span>🔎</span><span>Search</span></button>
-            <button class="nav-btn" data-view="people" aria-pressed="false"><span>👥</span><span>People</span></button>
-        </nav>
+            <label>Importance</label>
+            <input type="range" id="edImportance" min="0" max="10">
 
-        <footer class="footer">
-            <small>Web3 / Telegram hooks: add integrations in <code>js/api.js</code>.</small>
-        </footer>
-    </div>
+            <div class="editor-actions">
+                <button id="cancelEditBtn">Cancel</button>
+                <button id="saveEditBtn">Save</button>
+            </div>
+        </section>
 
-    <script type="module" src="js/app.js"></script>
+    </main>
+
+    <script src="app.js"></script>
 </body>
 </html>
