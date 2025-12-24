@@ -22,7 +22,6 @@ body {
     }
 
 input, textarea {
-    width: 100%;
     background: #1d1d22;
     border: 1px solid #33333a;
     color: white;

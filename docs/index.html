@@ -1,9 +1,11 @@
-﻿<!DOCTYPE html>
-<html lang="en">
+﻿<html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Dreams</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Dream Journal: A personal app to record, interpret, and manage your dreams. Built by Mohammad Jalal Jaleh." />
+    <meta name="author" content="Mohammad Jalal Jaleh" />
+    <title>Dream Journal</title>
+    <link rel="icon" href="eye.ico" type="image/x-icon" />
     <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -12,10 +14,14 @@
 
         <!-- LOGIN -->
         <section id="login-view" class="view active">
-            <h1>Dreams</h1>
-            <input id="usernameInput" placeholder="Username">
-            <input id="passwordInput" type="password" placeholder="Password">
+            <img style="width: 100px; margin: 0 auto; display: block;" src="eye.ico" alt="Dream Journal Icon" />
+            <h1 style="text-align: center;">Dream Journal</h1>
+            <input id="usernameInput" placeholder="Username" required>
+            <input id="passwordInput" type="password" placeholder="Password" required>
             <button id="loginBtn">Login</button>
+
+            <h3 style="text-align: center;">اگر رمز عبور ندارید از طریق ربات آن را دریافت کنید.</h3>
+
         </section>
 
         <!-- DREAMS -->
@@ -42,19 +48,23 @@
         <section id="editor-view" class="view">
             <h2 id="editorTitle">New Dream</h2>
 
-            <input id="edTitle" placeholder="Title">
-            <textarea id="edBody" placeholder="Body"></textarea>
-            <textarea id="edInterpretation" placeholder="Interpretation"></textarea>
-            <textarea id="edForeshadowing" placeholder="Foreshadowing"></textarea>
-            <textarea id="edCause" placeholder="Cause"></textarea>
-            <input id="edPeople" placeholder="People names">
+            <input id="edTitle" placeholder="Title / عنوان">
+            <textarea id="edBody" placeholder="Body / شرح خواب"></textarea>
+            <textarea id="edInterpretation" placeholder="Interpretation / تعبیر"></textarea>
+            <textarea id="edForeshadowing" placeholder="Foreshadowing / پیشگویی"></textarea>
+            <textarea id="edCause" placeholder="Cause / علت"></textarea>
+            <input id="edPeople" placeholder="People names / اسامی نفرات">
 
-            <input id="edDateEvent" placeholder="Date event">
-            <input id="edDateHour" placeholder="Date hour">
+            <input id="edDateEvent" placeholder="Date event / تاریخ روئیت">
+            <input id="edDateHour" placeholder="Date hour / ساعت روئیت">
 
-            <input id="edLocation" placeholder="Location">
-            <input id="edPurpose" placeholder="Purpose">
-            <textarea id="edOpinion" placeholder="Opinion"></textarea>
+            <input id="edLocation" placeholder="Location / مکان">
+            <input id="edPurpose" placeholder="Purpose / هدف">
+            <textarea id="edOpinion" placeholder="Opinion / دیدگاه"></textarea>
+
+            <label><input type="checkbox" id="edOccurred"> Occurred / رخ داد</label>
+            <input id="edDateOccurred" placeholder="Date Occurred / تاریخ رخ‌داد">
+            <textarea id="edNarration" placeholder="Narration / رخ‌داد پیش بینی شده"></textarea>
 
             <div class="checks">
                 <label><input type="checkbox" id="edPublic"> Public</label>
@@ -63,11 +73,11 @@
                 <label><input type="checkbox" id="edSpoiler"> Spoiler</label>
             </div>
 
-            <label>Lucidity</label>
-            <input type="range" id="edLucidity" min="0" max="10">
+            <label>Lucidity / شفافیت</label>
+            <input type="range" id="edLucidity" min="0" max="10" value="0">
 
-            <label>Importance</label>
-            <input type="range" id="edImportance" min="0" max="10">
+            <label>Importance / اهمیت</label>
+            <input type="range" id="edImportance" min="0" max="10" value="0">
 
             <div class="editor-actions">
                 <button id="cancelEditBtn">Cancel</button>
@@ -76,6 +86,10 @@
         </section>
 
     </main>
+
+    <footer style="text-align: center; padding: 10px; font-size: 12px; color: #bfc0c3;">
+        Built by Mohammad Jalal Jaleh
+    </footer>
 
     <script src="app.js"></script>
 </body>
